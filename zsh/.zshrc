@@ -119,3 +119,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Add Go binary directory to PATH
 export PATH=$PATH:/usr/local/go/bin
+
+# Add Neovim to PATH
+export PATH="$PATH:/opt/nvim-linux64/bin"
