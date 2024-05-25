@@ -122,3 +122,8 @@ export PATH=$PATH:/usr/local/go/bin
 
 # Add Neovim to PATH
 export PATH="$PATH:/opt/nvim-linux64/bin"
+
+# Add GHCup bin directory to PATH
+export PATH="$HOME/.ghcup/bin:$PATH"
+
+[ -f "/home/pinakeshwar/.ghcup/env" ] && . "/home/pinakeshwar/.ghcup/env" # ghcup-env
