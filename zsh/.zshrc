@@ -123,11 +123,6 @@ export PATH=$PATH:/usr/local/go/bin
 # Add Neovim to PATH
 export PATH="$PATH:/opt/nvim-linux64/bin"
 
-# Add GHCup bin directory to PATH
-export PATH="$HOME/.ghcup/bin:$PATH"
-
-[ -f "/home/pinakeshwar/.ghcup/env" ] && . "/home/pinakeshwar/.ghcup/env" # ghcup-enveval "$(direnv hook zsh)"
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
