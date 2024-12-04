@@ -1,0 +1,16 @@
+notARepository: 'quit'
+os:
+  editPreset: nvim
+gui:
+  showBottomLine: false
+  theme:
+    activeBorderColor:
+      - magenta
+    selectedLineBgColor:
+      - black
+    selectedRangeBgColor:
+      - black
+    unstagedChangesColor:
+      - yellow
+  border: rounded
+  nerdFontsVersion: '3'
