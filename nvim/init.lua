@@ -617,6 +617,9 @@ require('lazy').setup({
         -- install the following commented names manually using mason:
         -- blackd-client,
         -- sql-formatter
+        -- sonarlint_language_server = {},
+        -- cfn_lint = {},
+
         cssls = {},
         debugpy = {},
         delve = {},
@@ -639,6 +642,12 @@ require('lazy').setup({
         stylua = {},
         tailwindcss = {},
         ts_ls = {},
+        yamlfmt = {},
+        yamllint = {},
+        spectral = {},
+        yamlls = {},
+        actionlint = {},
+        yq = {},
         -- clangd = {},
         -- gopls = {},
         -- pyright = {},
