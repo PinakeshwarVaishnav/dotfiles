@@ -122,7 +122,7 @@ export LC_ALL=en_US.UTF-8
 export PATH=$PATH:/usr/local/go/bin
 
 # Add Neovim to PATH
-export PATH="$PATH:/opt/nvim-linux64/bin"
+export PATH="/usr/local/bin/nvim-linux-x86_64/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
