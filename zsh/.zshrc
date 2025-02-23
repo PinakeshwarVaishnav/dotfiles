@@ -121,9 +121,6 @@ export LC_ALL=en_US.UTF-8
 # Add Go binary directory to PATH
 export PATH=$PATH:/usr/local/go/bin
 
-# Add Neovim to PATH
-export PATH="/usr/local/bin/nvim-linux-x86_64/bin:$PATH"
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
