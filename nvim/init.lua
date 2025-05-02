@@ -617,7 +617,6 @@ require('lazy').setup({
         -- install the following commented names manually using mason:
         -- blackd-client,
         -- sql-formatter
-        -- sonarlint_language_server = {},
         -- cfn_lint = {},
 
         cssls = {},
