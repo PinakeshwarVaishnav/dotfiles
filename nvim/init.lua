@@ -621,12 +621,10 @@ require('lazy').setup({
 
         cssls = {},
         debugpy = {},
-        delve = {},
         emmet_language_server = {},
         eslint = {},
         eslint_d = {},
         flake8 = {},
-        gopls = {},
         graphql = {},
         html = {},
         jq = {},
