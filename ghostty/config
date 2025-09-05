@@ -2,3 +2,4 @@ fullscreen = true
 font-size = 20
 cursor-style = block
 font-thicken = true
+mouse-hide-while-typing = true
