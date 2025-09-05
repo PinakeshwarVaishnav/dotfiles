@@ -1,0 +1,3 @@
+# Ignore Fish shell universal variable files
+fish_variables
+fishd.*
