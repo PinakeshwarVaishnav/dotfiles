@@ -1,3 +1,8 @@
-set -gx PATH $HOME/.local/share/pnpm:$PATH
-
 set -gx PATH $HOME/.nvm/versions/node/v22.11.0/bin:$PATH
+
+# pnpm
+set -gx PNPM_HOME "/home/pinakeshwar/.local/share/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
