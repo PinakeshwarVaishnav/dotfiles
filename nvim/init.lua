@@ -641,7 +641,6 @@ require('lazy').setup({
         ts_ls = {},
         yamlfmt = {},
         yamllint = {},
-        spectral = {},
         yamlls = {},
         actionlint = {},
         yq = {},
