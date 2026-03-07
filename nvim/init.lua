@@ -159,6 +159,8 @@ vim.opt.scrolloff = 10
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
+-- Exit insert mode without reaching for Esc
+vim.keymap.set('i', 'jk', '<Esc>', { desc = 'Exit insert mode (Home Row)' })
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
