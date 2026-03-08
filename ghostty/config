@@ -16,3 +16,4 @@ font-feature = -calt,-liga,-dlig
 cursor-style-blink = false
 background-blur-radius = 0
 background-opacity = 1
+shell-integration-features = no-cursor
