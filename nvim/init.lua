@@ -600,33 +600,6 @@ require('lazy').setup({
         -- sql-formatter
         -- cfn_lint = {},
         --
-        ruff = {},
-        bandit = {},
-        uv = {},
-        cssls = {},
-        debugpy = {},
-        emmet_language_server = {},
-        eslint = {},
-        eslint_d = {},
-        graphql = {},
-        html = {},
-        jq = {},
-        jsonls = {},
-        jsonlint = {},
-        markdownlint = {},
-        prettier = {},
-        prettierd = {},
-        pyright = {},
-        sqlfluff = {},
-        sqlls = {},
-        stylua = {},
-        tailwindcss = {},
-        ts_ls = {},
-        yamlfmt = {},
-        yamllint = {},
-        yamlls = {},
-        actionlint = {},
-        yq = {},
         -- clangd = {},
         -- gopls = {},
         -- pyright = {},
@@ -639,6 +612,18 @@ require('lazy').setup({
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         -- ts_ls = {},
         --
+        ruff = {},
+        cssls = {},
+        emmet_language_server = {},
+        eslint = {},
+        graphql = {},
+        html = {},
+        jsonls = {},
+        pyright = {},
+        sqlls = {},
+        tailwindcss = {},
+        ts_ls = {},
+        yamlls = {},
 
         lua_ls = {
           -- cmd = {...},
@@ -668,8 +653,25 @@ require('lazy').setup({
       -- for you, so that they are available from within Neovim.
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
-        'stylua', -- Used to format Lua code
+        -- Formatters
+        'stylua',
+        'prettierd',
+        'yamlfmt',
+
+        -- Linters
+        'jsonlint',
+        'markdownlint',
+        'yamllint',
+        'actionlint',
+        'sqlfluff',
+
+        -- Debuggers & CLI Utilities
+        'debugpy',
+        'jq',
+        'yq',
       })
+
+      -- Auto-downloads everything in the background if missing
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
       require('mason-lspconfig').setup {
