@@ -1,0 +1,41 @@
+{
+	// Preferences & Accessibility
+	"window.zoomLevel": 3,
+	"editor.lineHeight": 26,
+	"editor.fontWeight": "500",
+	"workbench.reduceMotion": "on",
+	"vim.useSystemClipboard": true,
+	// Telemetry (Disabled)
+	"telemetry.telemetryLevel": "off",
+	"gitlens.telemetry.enabled": false,
+	"telemetry.feedback.enabled": false,
+	"telemetry.editStats.enabled": false,
+	// Git
+	"git.autofetch": true,
+	// Theme (Evergreen Custom)
+	"workbench.colorTheme": "Modern High Contrast",
+	"workbench.colorCustomizations": {
+		"[Modern High Contrast]": {
+			"editor.background": "#000000",
+			"sideBar.background": "#000000",
+			"activityBar.background": "#000000",
+			"terminal.background": "#000000",
+			"statusBar.background": "#000000",
+			"titleBar.activeBackground": "#000000",
+			"editorLineNumber.activeForeground": "#a3be8c",
+			"editorLineNumber.foreground": "#4c566a",
+			"editor.lineHighlightBackground": "#0c0f0a"
+		}
+	},
+	"editor.tokenColorCustomizations": {
+		"[Modern High Contrast]": {
+			"comments": "#5c6f59",
+			"functions": "#8fbcbb",
+			"keywords": "#a3be8c",
+			"numbers": "#d08770",
+			"strings": "#c2d6a4",
+			"types": "#8fbcbb",
+			"variables": "#e5e9f0"
+		}
+	}
+}
