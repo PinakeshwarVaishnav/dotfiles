@@ -13,7 +13,7 @@
 	// Git
 	"git.autofetch": true,
 	// Theme (Evergreen Custom)
-	"workbench.colorTheme": "Modern High Contrast",
+	"workbench.colorTheme": "Default High Contrast",
 	"workbench.colorCustomizations": {
 		"[Modern High Contrast]": {
 			"editor.background": "#000000",
