@@ -860,8 +860,9 @@ require('lazy').setup({
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.g.everforest_background = 'soft'
+      vim.g.everforest_background = 'hard'
       vim.g.everforest_better_performance = 1
+      vim.g.everforest_transparent_background = 2 -- 2 = also UI elements (sidebar/statusline), true OLED black
       vim.cmd.colorscheme 'everforest'
     end,
   },

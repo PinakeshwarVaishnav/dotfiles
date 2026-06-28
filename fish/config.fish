@@ -12,3 +12,6 @@ if [ -d "$FNM_PATH" ]
   set PATH "$FNM_PATH" $PATH
   fnm env | source
 end
+
+# Cursor (eye comfort): static block cursor, no blink
+set fish_cursor_default block

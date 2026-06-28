@@ -4,6 +4,7 @@
 	"editor.lineHeight": 26,
 	"editor.fontWeight": "500",
 	"workbench.reduceMotion": "on",
+	"editor.cursorBlinking": "solid",
 	"vim.useSystemClipboard": true,
 	// Telemetry (Disabled)
 	"telemetry.telemetryLevel": "off",
@@ -15,7 +16,7 @@
 	// Theme (Evergreen Custom)
 	"workbench.colorTheme": "Default High Contrast",
 	"workbench.colorCustomizations": {
-		"[Modern High Contrast]": {
+		"[Default High Contrast]": {
 			"editor.background": "#000000",
 			"sideBar.background": "#000000",
 			"activityBar.background": "#000000",
@@ -28,7 +29,7 @@
 		}
 	},
 	"editor.tokenColorCustomizations": {
-		"[Modern High Contrast]": {
+		"[Default High Contrast]": {
 			"comments": "#5c6f59",
 			"functions": "#8fbcbb",
 			"keywords": "#a3be8c",

@@ -6,6 +6,8 @@ gui:
   theme:
     activeBorderColor:
       - magenta
+    inactiveBorderColor:
+      - '#4c566a'
     selectedLineBgColor:
       - black
     selectedRangeBgColor:
