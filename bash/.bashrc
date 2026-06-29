@@ -57,9 +57,9 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;33m\]$(__git_ps1_lite)\[\033[00m\]\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(__git_ps1_lite)\$ '
 fi
 unset color_prompt force_color_prompt
 
@@ -120,8 +120,58 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export PNPM_HOME="/home/pinakeshwar/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
+# =====================================================================
+# Fish-like enhancements (pure bash builtins, zero external dependencies)
+# =====================================================================
+
+# --- Smarter, shared history (closest pure-bash equivalent to fish's
+#     instantly-shared, deduplicated, never-lost history) ---
+HISTSIZE=100000
+HISTFILESIZE=200000
+HISTCONTROL=ignoreboth:erasedups   # ignore dupes/space-prefixed, erase old dupes
+HISTTIMEFORMAT='%F %T  '           # timestamp entries in `history`
+
+# Append every command to the history file immediately and reload it,
+# so every open terminal sees every other terminal's history live.
+shopt -s histappend
+PROMPT_COMMAND="history -a; history -c; history -r${PROMPT_COMMAND:+; $PROMPT_COMMAND}"
+
+# Confirm expansions from history search before running (safety net for !!-style stuff)
+shopt -s histverify
+
+# --- Navigation niceties fish has out of the box ---
+shopt -s autocd      2>/dev/null   # type a directory name alone to cd into it
+shopt -s cdspell     2>/dev/null   # autocorrect minor typos in `cd`
+shopt -s dirspell    2>/dev/null   # autocorrect typos when tab-completing dir names
+shopt -s globstar                 # `**` recurses into subdirectories
+shopt -s nocaseglob                # case-insensitive filename globbing
+shopt -s no_empty_cmd_completion   # don't try to complete on an empty line
+shopt -s cmdhist                   # save multi-line commands as one history entry
+
+# --- Readline tweaks: up/down arrow filters history by what you've typed
+#     so far, which is the single biggest fish-feel win you get for free ---
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
+
+# Case-insensitive, colorized tab completion; show all matches immediately
+# instead of needing a second Tab press
+bind 'set completion-ignore-case on'
+bind 'set show-all-if-ambiguous on'
+bind 'set colored-stats on'
+bind 'set colored-completion-prefix on'
+bind 'set visible-stats on'
+
+# No terminal beep on completion/errors (fish is silent by default)
+bind 'set bell-style none'
+
+# --- Minimal git-branch prompt segment, fish-style, zero deps beyond git
+#     itself (which you almost certainly already have). If git isn't
+#     installed this silently does nothing. ---
+__git_ps1_lite() {
+    local b
+    b=$(git symbolic-ref --short HEAD 2>/dev/null) || return
+    printf ' (%s)' "$b"
+}
+
+# Note: PS1 above was updated in-place to call __git_ps1_lite; nothing
+# further to do here.
