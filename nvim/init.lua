@@ -645,6 +645,8 @@ require('lazy').setup({
         'yamlfmt',
 
         -- Linters
+        'jsonlint',
+        'markdownlint',
         'yamllint',
         'actionlint',
         'sqlfluff',
