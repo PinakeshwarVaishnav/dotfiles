@@ -1,18 +1,55 @@
 # ==========================================
-# Secret & Security Files (NEVER COMMIT)
+# Secret, Security & Credentials (NEVER COMMIT)
 # ==========================================
+# Private Keys & Certificates
 *.pem
 *.key
 *.p12
 *.pfx
 *.asc
+*.crt
+*.csr
+*.cer
+id_rsa
+id_rsa.pub
+id_dsa
+id_ecdsa
+id_ed25519
+id_ed25519.pub
+
+# Environment & Config Secrets
 .env
 .env.*
 !.env.example
 !.env.template
+.netrc
+.npmrc
+.yarnrc
 
-# Local Git configurations / overrides
+# Cloud & Infrastructure Credentials
+.aws/
+.gcp/
+.azure/
+.kube/
+.terraform/
+*.tfvars
+*.tfvars.json
+
+# Local Git Configurations / Overrides
 .gitconfig.local
+
+# ==========================================
+# Shell, Terminal & REPL Histories
+# ==========================================
+.bash_history
+.zsh_history
+.zsh_sessions/
+.node_repl_history
+.python_history
+.irb_history
+.psql_history
+.mysql_history
+.lesshst
 
 # ==========================================
 # Operating System & System Clutter
@@ -24,9 +61,12 @@
 
 # macOS
 .DS_Store
+.DS_Store?
 .AppleDouble
 .LSOverride
 ._*
+.Spotlight-V100
+.Trashes
 
 # Windows
 Thumbs.db
@@ -35,6 +75,7 @@ ehthumbs.db
 ehdesktop.ini
 Desktop.ini
 $RECYCLE.BIN/
+*.stackdump
 
 # ==========================================
 # Editors & IDEs
@@ -49,16 +90,25 @@ Session.vim
 Sessionx.vim
 .netrwhist
 
-# VS Code
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
+# VS Code (Kept clean without forcing track on settings)
+.vscode/
 *.code-workspace
 
+# JetBrains / IntelliJ / WebStorm / PyCharm
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Sublime Text / Eclipse
+*.sublime-workspace
+*.sublime-project
+.project
+.classpath
+.settings/
+
 # ==========================================
-# Common Languages & Runtimes
+# Common Languages, Runtimes & Frameworks
 # ==========================================
 # Python
 __pycache__/
@@ -67,18 +117,25 @@ __pycache__/
 .venv/
 venv/
 ENV/
+env/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+.ipynb_checkpoints/
 
-# Node.js / JavaScript
+# Node.js / JavaScript / Modern Web
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
+.next/
+.nuxt/
+.astro/
+.turbo/
+.cache/
 
-# C / C++ / Build Outputs
+# C / C++ / Native Build Outputs
 *.o
 *.obj
 *.so
@@ -86,12 +143,24 @@ yarn-error.log*
 *.dll
 *.a
 *.exe
+*.out
+*.app
 build/
 dist/
 
+# Rust / Go / Java
+target/
+*.class
+*.jar
+*.war
+
 # ==========================================
-# System Logs & Databases
+# System Logs, Databases & Temporary Files
 # ==========================================
 *.log
 *.sqlite
 *.sqlite3
+*.db
+*.tmp
+*.bak
+*.swp
