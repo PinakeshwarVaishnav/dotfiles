@@ -1,0 +1,81 @@
+[user]
+    name = Pinakeshwar Vaishnav
+    email = 122798447+PinakeshwarVaishnav@users.noreply.github.com
+
+[core]
+    editor = nvim
+    autocrlf = input
+    whitespace = trailing-space,space-before-tab
+    excludesfile = ~/.gitignore_global
+    # Faster status calls on large repos
+    fsmonitor = true
+    untrackedCache = true
+
+[init]
+    defaultBranch = main
+
+[pull]
+    rebase = true
+
+[push]
+    default = simple
+    autoSetupRemote = true
+    followTags = true
+
+[fetch]
+    prune = true
+    pruneTags = true
+    all = true
+
+[rebase]
+    autoSquash = true
+    autoStash = true
+    updateRefs = true
+
+[diff]
+    algorithm = histogram
+    colorWords = true
+    renames = copies
+    mnemonicPrefix = true
+
+[merge]
+    conflictStyle = zdiff3
+
+[column]
+    ui = auto
+
+[branch]
+    sort = -committerdate
+
+[tag]
+    sort = version:refname
+
+[alias]
+    # Safety
+    pushf = push --force-with-lease
+
+    # Ergonomics & Short Hand
+    st = status -sb
+    co = checkout
+    sw = switch
+    br = branch
+    ci = commit
+    ca = commit --amend --no-edit
+
+    # Modern Log Visualizations
+    lg = log --graph --pretty=format:'%C(yellow)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    lga = log --graph --pretty=format:'%C(yellow)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all
+
+    # Useful Utility Aliases
+    unstage = reset HEAD --
+    last = log -1 HEAD --stat
+    undo = reset --soft HEAD~1
+    discard = checkout -- .
+
+[rerere]
+    enabled = true
+    autoUpdate = true
+
+[include]
+    # Keep machine-specific settings or credentials out of version control
+    path = ~/.gitconfig.local
