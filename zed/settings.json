@@ -1,0 +1,153 @@
+// Zed Settings
+// Optimized for: Visual Ergonomics, Low-Strain High Contrast & Minimal Distraction
+
+{
+  // ------------------------------------------------------------
+  // Appearance & Deep Black Minimal Theme
+  // ------------------------------------------------------------
+
+  "theme": {
+    "mode": "dark",
+    "light": "One Dark",
+    "dark": "One Dark"
+  },
+
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)"
+  },
+
+  // Deep black surfaces for maximum contrast ratio and visual clarity
+  "experimental.theme_overrides": {
+    "background": "#000000",
+    "editor.background": "#000000",
+    "editor.gutter.background": "#000000",
+    "panel.background": "#000000",
+    "terminal.background": "#000000",
+    "status_bar.background": "#000000",
+    "title_bar.background": "#000000",
+    "tab_bar.background": "#000000",
+    "tab.active_background": "#000000",
+    "tab.inactive_background": "#000000",
+    "toolbar.background": "#000000",
+
+    // Low-luminance UI markers
+    "editor.line_number": "#4c566a",
+    "editor.active_line_number": "#a3be8c",
+    "scrollbar.thumb.background": "#1a1a1a55",
+    "scrollbar.track.background": "#00000000",
+    "scrollbar.track.border": "#00000000",
+
+    // Evergreen Palette: Soft greens, teals, and warm tones for reduced eye strain
+    "syntax": {
+      "comment": { "color": "#5c6f59" },
+      "function": { "color": "#8fbcbb" },
+      "keyword": { "color": "#a3be8c" },
+      "number": { "color": "#d08770" },
+      "string": { "color": "#c2d6a4" },
+      "type": { "color": "#8fbcbb" },
+      "variable": { "color": "#e5e9f0" },
+      "property": { "color": "#8fbcbb" },
+      "operator": { "color": "#a3be8c" },
+      "punctuation": { "color": "#d8dee9" }
+    }
+  },
+
+  // ------------------------------------------------------------
+  // Typography & Readability
+  // ------------------------------------------------------------
+
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "buffer_font_weight": 500, // Balanced weight for crisp rendering on dark backgrounds
+  "buffer_line_height": "comfortable",
+  "buffer_font_family": ".ZedMono",
+
+  // Avoid visual distraction from ligature shape transformations
+  "buffer_font_features": {
+    "calt": false
+  },
+
+  // ------------------------------------------------------------
+  // Visual Comfort & Distraction-Free Buffer
+  // ------------------------------------------------------------
+
+  // Solid carets prevent peripheral visual distraction
+  "cursor_blink": false,
+  "cursor_shape": "bar",
+
+  // Gutter-only highlight keeps the active line marker subtle
+  "current_line_highlight": "gutter",
+
+  // Suppress static vertical grid lines for a clean reading canvas
+  "indent_guides": {
+    "enabled": false
+  },
+
+  "minimap": {
+    "show": "never"
+  },
+
+  "show_whitespaces": "none",
+
+  "toolbar": {
+    "breadcrumbs": false,
+    "quick_actions": false
+  },
+
+  // Disables the code action lightning bolt icon at the start of buffer lines
+  "inline_code_actions": false,
+
+  "gutter": {
+    "line_numbers": true
+  },
+
+  "scrollbar": {
+    "show": "auto",
+    "cursors": false,
+    "git_diff": false,
+    "search_results": false,
+    "selected_text": false,
+    "selected_symbol": false,
+    "diagnostics": "error",
+    "axes": {
+      "horizontal": false,
+      "vertical": true
+    }
+  },
+
+  "unnecessary_code_fade": 0.5,
+
+  // ------------------------------------------------------------
+  // Terminal
+  // ------------------------------------------------------------
+
+  "terminal": {
+    "font_size": 16,
+    "font_family": ".ZedMono",
+    "font_features": {
+      "calt": false
+    },
+    "blinking": "off"
+  },
+
+  // ------------------------------------------------------------
+  // Privacy
+  // ------------------------------------------------------------
+
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+    "anthropic_retention": false
+  },
+
+  // ------------------------------------------------------------
+  // Modal Editing
+  // ------------------------------------------------------------
+
+  "vim_mode": true,
+  "vim": {
+    "use_system_clipboard": "always"
+  }
+}
